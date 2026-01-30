@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Before & After Transformations | ClearSpace Organizers</title>
+    <meta name="description"
+        content="View our amazing before and after home organization transformations. See how professional organizing can completely transform your living spaces.">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-house-heart-fill me-2"></i>ClearSpace Organizers
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home&nbsp;2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <button class="theme-toggle me-3" id="themeToggle" aria-label="Toggle theme">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm me-3">Login</a>
+                        <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" style="background: linear-gradient(135deg, #8B9A7B, #D4C5B9); min-height: 50vh;">
+            <div class="container">
+                <div class="row align-items-center min-vh-50">
+                    <div class="col-lg-8 mx-auto text-center hero-content">
+                        <h1 class="display-4 fw-bold mb-4">Transformation Gallery</h1>
+                        <p class="lead mb-4">Witness the incredible before and after transformations. See how
+                            professional organizing can completely revitalize your living spaces.</p>
+                        <div class="d-flex justify-content-center gap-3 flex-wrap">
+                            <a href="#featured" class="btn btn-light">Featured Projects</a>
+                            <a href="#all-projects" class="btn btn-outline-light">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter Section -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-4">
+                    <h2 class="h4 fw-bold">Filter by Room Type</h2>
+                </div>
+                <div class="d-flex justify-content-center flex-wrap gap-2 mb-5">
+                    <button class="btn btn-primary active" data-filter="all">All Projects</button>
+                    <button class="btn btn-outline-primary" data-filter="kitchen">Kitchen</button>
+                    <button class="btn btn-outline-primary" data-filter="closet">Closet</button>
+                    <button class="btn btn-outline-primary" data-filter="living-room">Living Room</button>
+                    <button class="btn btn-outline-primary" data-filter="bedroom">Bedroom</button>
+                    <button class="btn btn-outline-primary" data-filter="office">Home Office</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Transformations -->
+        <section id="featured" class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5 animate-on-scroll">
+                    <h2 class="display-5 fw-bold">Featured Transformations</h2>
+                    <p class="lead text-muted">Our most dramatic and inspiring home makeovers</p>
+                </div>
+
+                <!-- Featured Project 1 -->
+                <div class="row mb-5 align-items-center animate-on-scroll">
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <h4 class="mb-3">Kitchen Chaos to Culinary Haven</h4>
+                        <div class="image-comparison"
+                            style="height: 400px; position: relative; overflow: hidden; border-radius: 1rem;">
+                            <img src="https://img.freepik.com/free-photo/woman-chef-cooking-vegetables-pan_1303-22287.jpg"
+                                alt="Before Kitchen"
+                                style="width: 100%; height: 100%; object-fit: cover; position: absolute;">
+                            <div class="comparison-overlay"
+                                style="position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden;">
+                                <img src="https://images.unsplash.com/photo-1484154218962-a1c002085d2f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                                    alt="After Kitchen"
+                                    style="width: 200%; height: 100%; object-fit: cover; transform: translateX(50%);">
+                            </div>
+                            <div class="comparison-slider"
+                                style="position: absolute; top: 0; left: 50%; width: 4px; height: 100%; background: white; cursor: ew-resize; transform: translateX(-50%);">
+                                <div
+                                    style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: white; border-radius: 50%; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
+                                    <i class="bi bi-arrows-expand text-primary fs-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="badge bg-danger fs-6">BEFORE</span>
+                            <span class="badge bg-success fs-6">AFTER</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="ps-lg-4">
+                            <h3 class="mb-3">Complete Kitchen Transformation</h3>
+                            <p class="lead mb-3">A complete overhaul of a cluttered, dysfunctional kitchen into an
+                                organized, efficient cooking space.</p>
+                            <div class="mb-4">
+                                <h5 class="text-primary mb-2">Project Details:</h5>
+                                <ul class="list-unstyled">
+                                    <li><i
+                                            class="bi bi-check-circle-fill text-primary me-2"></i><strong>Duration:</strong>
+                                        5 days</li>
+                                    <li><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Items
+                                            Sorted:</strong> 500+ items</li>
+                                    <li><i class="bi bi-check-circle-fill text-primary me-2"></i><strong>Storage
+                                            Solutions:</strong> Custom pantry system</li>
+                                </ul>
+                            </div>
+                            <div class="d-flex gap-2 flex-wrap">
+                                <span class="badge bg-primary me-2">Kitchen</span>
+                                <span class="badge bg-primary me-2">Pantry</span>
+                                <span class="badge bg-primary">Storage Solutions</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section id="all-projects" class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-5 animate-on-scroll">
+                    <h2 class="display-5 fw-bold">All Transformations</h2>
+                    <p class="lead text-muted">Browse our complete collection of organizing projects</p>
+                </div>
+
+                <div class="row g-4" id="galleryGrid">
+                    <!-- Gallery Items -->
+                    <div class="col-md-6 col-lg-4 gallery-item animate-on-scroll" data-category="kitchen">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Kitchen Organization" class="card-img-top"
+                                    style="height: 250px; object-fit: cover;">
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-primary">Kitchen</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <div class="text-white p-3">
+                                        <h5 class="mb-1">Small Kitchen Makeover</h5>
+                                        <p class="small mb-0">Maximized storage in compact space</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Before & After • 2 days • Storage Solutions</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 gallery-item animate-on-scroll" data-category="closet">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="https://media.istockphoto.com/id/1394055240/photo/happy-black-female-chef-preparing-food-in-frying-pan-at-restaurant-kitchen.jpg?s=612x612&w=0&k=20&c=6DjpoYqgYVDLmtj3-q7H7wvoiwkVgzi1rn7a_XUZ_Ng="
+                                    alt="Closet Organization" class="card-img-top"
+                                    style="height: 250px; object-fit: cover;">
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-primary">Closet</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <div class="text-white p-3">
+                                        <h5 class="mb-1">Walk-in Closet Transformation</h5>
+                                        <p class="small mb-0">Luxury organization system</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Before & After • 4 days • Custom Design</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 gallery-item animate-on-scroll" data-category="living-room">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Living Room Organization" class="card-img-top"
+                                    style="height: 250px; object-fit: cover;">
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-primary">Living Room</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <div class="text-white p-3">
+                                        <h5 class="mb-1">Family Room Refresh</h5>
+                                        <p class="small mb-0">Kid-friendly organization</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Before & After • 3 days • Family Systems</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 gallery-item animate-on-scroll" data-category="office">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="Home Office Organization" class="card-img-top"
+                                    style="height: 250px; object-fit: cover;">
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-primary">Home Office</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <div class="text-white p-3">
+                                        <h5 class="mb-1">Productivity Power Station</h5>
+                                        <p class="small mb-0">Remote worker optimization</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Before & After • 2 days • Productivity</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 gallery-item animate-on-scroll" data-category="bedroom">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI_e89LeD2nDJ_8aJHYKVLRKRU04HL8qjOtA&s"
+                                    alt="Bedroom Organization" class="card-img-top"
+                                    style="height: 250px; object-fit: cover;">
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-primary">Bedroom</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <div class="text-white p-3">
+                                        <h5 class="mb-1">Serene Bedroom Sanctuary</h5>
+                                        <p class="small mb-0">Peaceful sleeping environment</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Before & After • 2 days • Minimalist</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 gallery-item animate-on-scroll" data-category="kitchen">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="position-relative overflow-hidden">
+                                <img src="https://img.freepik.com/free-photo/getting-ready-dinner-young-dark-haired-woman-serving-table-kitchen_259150-59705.jpg?semt=ais_hybrid&w=740&q=80"
+                                    alt="Pantry Organization" class="card-img-top"
+                                    style="height: 250px; object-fit: cover;">
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-primary">Kitchen</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <div class="text-white p-3">
+                                        <h5 class="mb-1">Pantry Perfection</h5>
+                                        <p class="small mb-0">Food storage optimization</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text small text-muted">Before & After • 2 days • Pantry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Load More Button -->
+                <div class="text-center mt-5">
+                    <button class="btn btn-primary btn-lg" id="loadMoreBtn">Load More Projects</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5 animate-on-scroll">
+                    <h2 class="display-5 fw-bold">Transformation by Numbers</h2>
+                    <p class="lead text-muted">The impact of our organizing services</p>
+                </div>
+                <div class="row text-center">
+                    <div class="col-6 col-md-3 mb-4 animate-on-scroll">
+                        <div class="stat-item">
+                            <h3 class="display-4 fw-bold text-primary" data-counter="500">0</h3>
+                            <p class="text-muted">Projects Completed</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4 animate-on-scroll">
+                        <div class="stat-item">
+                            <h3 class="display-4 fw-bold text-primary" data-counter="10000">0</h3>
+                            <p class="text-muted">Items Organized</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4 animate-on-scroll">
+                        <div class="stat-item">
+                            <h3 class="display-4 fw-bold text-primary" data-counter="2500">0</h3>
+                            <p class="text-muted">Boxes Donated</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3 mb-4 animate-on-scroll">
+                        <div class="stat-item">
+                            <h3 class="display-4 fw-bold text-primary" data-counter="98">0</h3>
+                            <p class="text-muted">% Client Satisfaction</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section-padding bg-primary text-white">
+            <div class="container text-center">
+                <h2 class="display-5 fw-bold mb-4">Ready for Your Transformation?</h2>
+                <p class="lead mb-4">Let us create your dream organized space. Schedule your free consultation today.
+                </p>
+                <div class="d-flex justify-content-center gap-3 flex-wrap">
+                    <a href="contact.html" class="btn btn-light btn-lg">Start Your Project</a>
+                    <a href="services.html" class="btn btn-outline-light btn-lg">View Services</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="bi bi-house-heart-fill me-2"></i>ClearSpace Organizers</h5>
+                    <p class="mb-3">Transforming spaces and lives through professional organization services.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html">Home Organization</a></li>
+                        <li class="mb-2"><a href="services.html">Office Organization</a></li>
+                        <li class="mb-2"><a href="services.html">Decluttering</a></li>
+                        <li class="mb-2"><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="gallery.html">Gallery</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Newsletter</h5>
+                    <p class="mb-3">Get organizing tips and exclusive offers delivered to your inbox.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-white">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 ClearSpace Organizers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <style>
+        .comparison-slider {
+            transition: none;
+        }
+
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+
+        .gallery-item.show {
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        .gallery-item.hidden {
+            display: none;
+        }
+
+        .card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.8));
+            display: flex;
+            align-items: flex-end;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+    </style>
+</body>
+
+</html>

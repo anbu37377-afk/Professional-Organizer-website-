@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ClearSpace Organizers</title>
+    <meta name="description"
+        content="Login to your ClearSpace Organizers account to access your organizing projects, appointments, and exclusive content.">
+    <meta name="keywords" content="login, sign in, account access, client portal">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+</head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <i class="bi bi-house-heart-fill me-2"></i>ClearSpace Organizers
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="home-2.html">Home&nbsp;2</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="pricing.html">Pricing</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <button class="theme-toggle me-3" id="themeToggle" aria-label="Toggle theme">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                        <a href="login.html" class="btn btn-outline-primary btn-sm me-3">Login</a>
+                        <a href="register.html" class="btn btn-primary btn-sm">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Login Section -->
+        <section class="section-padding" style="min-height: 100vh; display: flex; align-items: center;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-5 col-md-7">
+                        <div class="card border-0 shadow-lg">
+                            <div class="card-body p-5">
+                                <!-- Logo and Title -->
+                                <div class="text-center mb-4">
+                                    <a href="index.html"
+                                        class="text-decoration-none d-inline-flex align-items-center mb-3">
+                                        <div class="service-icon me-2 mb-0"
+                                            style="width: 50px; height: 50px; font-size: 1.25rem;">
+                                            <i class="bi bi-house-heart-fill"></i>
+                                        </div>
+                                        <span class="h4 fw-bold mb-0"
+                                            style="font-family: var(--secondary-font);">ClearSpace Organizers</span>
+                                    </a>
+                                    <h2 class="fw-bold">Welcome Back</h2>
+                                    <p class="text-muted">Sign in to your ClearSpace Organizers account</p>
+                                </div>
+
+                                <!-- Login Form -->
+                                <form class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-envelope"></i>
+                                            </span>
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Enter your email" required>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter a valid email address.
+                                        </div>
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">
+                                                <i class="bi bi-lock"></i>
+                                            </span>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Enter your password" required>
+                                            <button class="btn btn-outline-secondary" type="button" id="togglePassword">
+                                                <i class="bi bi-eye" id="toggleIcon"></i>
+                                            </button>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter your password.
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-between align-items-center mb-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="remember">
+                                            <label class="form-check-label" for="remember">
+                                                Remember me
+                                            </label>
+                                        </div>
+                                        <a href="#" class="text-decoration-none">Forgot password?</a>
+                                    </div>
+
+                                    <button type="submit" class="btn btn-primary btn-lg w-100 mb-3">Sign In</button>
+
+                                    <div class="text-center">
+                                        <p class="mb-0">Don't have an account? <a href="register.html"
+                                                class="text-decoration-none">Sign up</a></p>
+                                    </div>
+                                </form>
+
+                                <!-- Divider -->
+                                <div class="divider my-4">
+                                    <span class="text-muted">OR</span>
+                                </div>
+
+                                <!-- Social Login -->
+                                <div class="d-grid gap-2">
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <i class="bi bi-google me-2"></i>Continue with Google
+                                    </button>
+                                    <button class="btn btn-outline-primary" type="button">
+                                        <i class="bi bi-facebook me-2"></i>Continue with Facebook
+                                    </button>
+                                </div>
+
+                                <!-- Success Message (Hidden by default) -->
+                                <div class="alert alert-success mt-3 d-none" id="successMessage">
+                                    <i class="bi bi-check-circle me-2"></i>
+                                    Login successful! Redirecting to your dashboard...
+                                </div>
+
+                                <!-- Error Message (Hidden by default) -->
+                                <div class="alert alert-danger mt-3 d-none" id="errorMessage">
+                                    <i class="bi bi-exclamation-triangle me-2"></i>
+                                    Invalid email or password. Please try again.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Help Links -->
+                        <div class="text-center mt-4">
+                            <p class="text-muted">
+                                <a href="#" class="text-decoration-none me-3">Help Center</a>
+                                <a href="#" class="text-decoration-none me-3">Privacy Policy</a>
+                                <a href="#" class="text-decoration-none">Terms of Service</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5><i class="bi bi-house-heart-fill me-2"></i>ClearSpace Organizers</h5>
+                    <p class="mb-3">Transforming spaces and lives through professional organization services.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="bi bi-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="services.html">Home Organization</a></li>
+                        <li class="mb-2"><a href="services.html">Office Organization</a></li>
+                        <li class="mb-2"><a href="services.html">Decluttering</a></li>
+                        <li class="mb-2"><a href="pricing.html">Pricing</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5>Support</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html">About Us</a></li>
+                        <li class="mb-2"><a href="blog.html">Blog</a></li>
+                        <li class="mb-2"><a href="gallery.html">Gallery</a></li>
+                        <li class="mb-2"><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5>Newsletter</h5>
+                    <p class="mb-3">Get organizing tips and exclusive offers delivered to your inbox.</p>
+                    <form class="d-flex">
+                        <input type="email" class="form-control me-2" placeholder="Your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <hr class="my-4 bg-white">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2026 ClearSpace Organizers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <style>
+        .divider {
+            position: relative;
+            text-align: center;
+        }
+
+        .divider::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gray-color);
+        }
+
+        .divider span {
+            background: var(--white-color);
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        [data-theme="dark"] .divider span {
+            background: var(--dark-color);
+        }
+
+        .input-group-text {
+            background: var(--light-color);
+            border-right: none;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(139, 154, 123, 0.25);
+        }
+
+        .btn-outline-secondary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .btn-outline-secondary:hover {
+            background: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--white-color);
+        }
+    </style>
+
+    <script>
+        // Toggle password visibility
+        document.getElementById('togglePassword').addEventListener('click', function () {
+            const passwordInput = document.getElementById('password');
+            const toggleIcon = document.getElementById('toggleIcon');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                toggleIcon.className = 'bi bi-eye-slash';
+            } else {
+                passwordInput.type = 'password';
+                toggleIcon.className = 'bi bi-eye';
+            }
+        });
+
+        // Form validation and submission
+        document.querySelector('.needs-validation').addEventListener('submit', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+
+            const successMessage = document.getElementById('successMessage');
+            const errorMessage = document.getElementById('errorMessage');
+
+            // Hide any existing messages
+            successMessage.classList.add('d-none');
+            errorMessage.classList.add('d-none');
+
+            if (this.checkValidity()) {
+                // Simulate successful login
+                successMessage.classList.remove('d-none');
+                this.reset();
+                this.classList.remove('was-validated');
+
+                // Simulate redirect after 2 seconds
+                setTimeout(() => {
+                    // In a real application, this would redirect to dashboard
+                    console.log('Redirecting to dashboard...');
+                }, 2000);
+            } else {
+                // Show error message
+                errorMessage.classList.remove('d-none');
+            }
+
+            this.classList.add('was-validated');
+        }, false);
+
+        // Social login handlers
+        document.querySelectorAll('.btn-outline-primary').forEach(button => {
+            if (button.textContent.includes('Google') || button.textContent.includes('Facebook')) {
+                button.addEventListener('click', function () {
+                    const successMessage = document.getElementById('successMessage');
+                    successMessage.textContent = `Connecting with ${this.textContent.includes('Google') ? 'Google' : 'Facebook'}...`;
+                    successMessage.classList.remove('d-none');
+
+                    setTimeout(() => {
+                        successMessage.textContent = 'Login successful! Redirecting to your dashboard...';
+                    }, 1500);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
