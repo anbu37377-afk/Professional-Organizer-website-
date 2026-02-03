@@ -23,7 +23,7 @@ function initThemeToggle() {
 
 function toggleTheme() {
     const isDark = document.body.classList.contains('dark');
-    
+
     if (isDark) {
         document.body.classList.remove('dark');
         localStorage.setItem('theme', 'light');
@@ -133,7 +133,7 @@ function initScrollAnimations() {
 function animateCounter(element, target, duration = 2000) {
     let start = 0;
     const increment = target / (duration / 16);
-    
+
     const updateCounter = () => {
         start += increment;
         if (start < target) {
@@ -143,7 +143,7 @@ function animateCounter(element, target, duration = 2000) {
             element.textContent = target;
         }
     };
-    
+
     updateCounter();
 }
 
@@ -171,11 +171,11 @@ function initGalleryFilter() {
         filterButtons.forEach(button => {
             button.addEventListener('click', () => {
                 const filter = button.getAttribute('data-filter');
-                
+
                 // Update active button
                 filterButtons.forEach(btn => btn.classList.remove('active'));
                 button.classList.add('active');
-                
+
                 // Filter gallery items
                 galleryItems.forEach(item => {
                     const category = item.getAttribute('data-category');
@@ -199,38 +199,38 @@ function initGalleryFilter() {
 // ==================== IMAGE COMPARISON SLIDER ====================
 function initImageComparison() {
     const comparisonContainers = document.querySelectorAll('.image-comparison');
-    
+
     comparisonContainers.forEach(container => {
         const slider = container.querySelector('.comparison-slider');
         const overlay = container.querySelector('.comparison-overlay');
         let isDragging = false;
-        
+
         if (slider && overlay) {
             const updateSliderPosition = (e) => {
                 const rect = container.getBoundingClientRect();
                 const x = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
                 const position = ((x - rect.left) / rect.width) * 100;
-                
+
                 if (position >= 0 && position <= 100) {
                     slider.style.left = `${position}%`;
                     overlay.style.width = `${position}%`;
                 }
             };
-            
+
             slider.addEventListener('mousedown', () => isDragging = true);
             slider.addEventListener('touchstart', () => isDragging = true);
-            
+
             document.addEventListener('mousemove', (e) => {
                 if (isDragging) updateSliderPosition(e);
             });
-            
+
             document.addEventListener('touchmove', (e) => {
                 if (isDragging) updateSliderPosition(e);
             });
-            
+
             document.addEventListener('mouseup', () => isDragging = false);
             document.addEventListener('touchend', () => isDragging = false);
-            
+
             // Initialize slider position
             slider.style.left = '50%';
             overlay.style.width = '50%';
@@ -241,7 +241,7 @@ function initImageComparison() {
 // ==================== FORM VALIDATION ====================
 function initFormValidation() {
     const forms = document.querySelectorAll('.needs-validation');
-    
+
     forms.forEach(form => {
         form.addEventListener('submit', (e) => {
             if (!form.checkValidity()) {
@@ -256,36 +256,36 @@ function initFormValidation() {
 // ==================== TESTIMONIAL SLIDER ====================
 function initTestimonialSlider() {
     const testimonialSliders = document.querySelectorAll('.testimonial-slider');
-    
+
     testimonialSliders.forEach(slider => {
         const items = slider.querySelectorAll('.testimonial-item');
         const prevBtn = slider.querySelector('.prev-btn');
         const nextBtn = slider.querySelector('.next-btn');
         let currentIndex = 0;
-        
+
         if (items.length > 0) {
             const showSlide = (index) => {
                 items.forEach((item, i) => {
                     item.style.display = i === index ? 'block' : 'none';
                 });
             };
-            
+
             const nextSlide = () => {
                 currentIndex = (currentIndex + 1) % items.length;
                 showSlide(currentIndex);
             };
-            
+
             const prevSlide = () => {
                 currentIndex = (currentIndex - 1 + items.length) % items.length;
                 showSlide(currentIndex);
             };
-            
+
             if (nextBtn) nextBtn.addEventListener('click', nextSlide);
             if (prevBtn) prevBtn.addEventListener('click', prevSlide);
-            
+
             // Auto-play
             setInterval(nextSlide, 5000);
-            
+
             // Initialize first slide
             showSlide(0);
         }
@@ -295,20 +295,20 @@ function initTestimonialSlider() {
 // ==================== COUNTDOWN TIMER ====================
 function initCountdown() {
     const countdownElements = document.querySelectorAll('[data-countdown]');
-    
+
     countdownElements.forEach(element => {
         const targetDate = new Date(element.getAttribute('data-countdown')).getTime();
-        
+
         const updateCountdown = () => {
             const now = new Date().getTime();
             const distance = targetDate - now;
-            
+
             if (distance > 0) {
                 const days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-                
+
                 element.innerHTML = `
                     <div class="countdown-item">
                         <span class="countdown-number">${days}</span>
@@ -331,7 +331,7 @@ function initCountdown() {
                 element.innerHTML = '<p class="text-center">The countdown has ended!</p>';
             }
         };
-        
+
         updateCountdown();
         setInterval(updateCountdown, 1000);
     });
@@ -340,7 +340,7 @@ function initCountdown() {
 // ==================== SMOOTH SCROLL FOR ANCHOR LINKS ====================
 function initSmoothScroll() {
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
-    
+
     anchorLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
@@ -362,7 +362,7 @@ function initSmoothScroll() {
 // ==================== LAZY LOADING ====================
 function initLazyLoading() {
     const images = document.querySelectorAll('img[data-src]');
-    
+
     const imageObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -373,8 +373,28 @@ function initLazyLoading() {
             }
         });
     });
-    
+
     images.forEach(img => imageObserver.observe(img));
+}
+
+// ==================== ACTIVE NAVIGATION ====================
+function initActiveNavigation() {
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    navLinks.forEach(link => {
+        const linkHref = link.getAttribute('href');
+        if (!linkHref) return;
+
+        // Remove query strings and hashes
+        const cleanLinkHref = linkHref.split('?')[0].split('#')[0];
+
+        if (cleanLinkHref === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
 }
 
 // ==================== UTILITY FUNCTIONS ====================
@@ -392,7 +412,7 @@ function debounce(func, wait) {
 
 function throttle(func, limit) {
     let inThrottle;
-    return function() {
+    return function () {
         const args = arguments;
         const context = this;
         if (!inThrottle) {
@@ -418,7 +438,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initCountdown();
     initSmoothScroll();
     initLazyLoading();
-    
+    initActiveNavigation();
+
     // Add loading complete class
     document.body.classList.add('loaded');
 });

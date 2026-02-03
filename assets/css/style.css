@@ -323,6 +323,26 @@ a:hover {
   color: var(--accent-color);
 }
 
+/* ==================== CONTRAST FIXES ==================== */
+.bg-primary h1,
+.bg-primary h2,
+.bg-primary h3,
+.bg-primary h4,
+.bg-primary h5,
+.bg-primary h6,
+.bg-primary p,
+.bg-primary .lead,
+.bg-primary span,
+.bg-primary small,
+.bg-primary li {
+  color: var(--white-color) !important;
+}
+
+/* Ensure form controls inside bg-primary maintain their text color */
+.bg-primary .form-control {
+  color: var(--dark-color) !important;
+}
+
 /* ==================== BOOTSTRAP OVERRIDES ==================== */
 .btn-primary {
   background-color: var(--primary-color);
