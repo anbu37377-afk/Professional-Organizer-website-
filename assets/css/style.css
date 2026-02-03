@@ -95,9 +95,15 @@ body.dark .navbar-nav .nav-link {
   color: #E0E0E0 !important;
 }
 
-body.dark .navbar-nav .nav-link:hover,
+body.dark .navbar-nav .nav-link:hover {
+  color: #9AAB8B !important;
+}
+
 body.dark .navbar-nav .nav-link.active {
   color: #9AAB8B !important;
+  font-weight: 600;
+  border-bottom: 2px solid #9AAB8B;
+  padding-bottom: 5px;
 }
 
 /* Dark Mode - Hero Section */
@@ -414,9 +420,15 @@ a:hover {
   }
 }
 
-.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:hover {
+  color: var(--primary-color) !important;
+}
+
 .navbar-nav .nav-link.active {
   color: var(--primary-color) !important;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 5px;
 }
 
 /* ==================== CUSTOM COMPONENTS ==================== */
