@@ -170,6 +170,10 @@ body.dark .accordion-item {
   border-color: #333;
 }
 
+body.dark .accordion-body {
+  color: #E0E0E0;
+}
+
 /* Dark Mode - Bootstrap Utility Overrides */
 body.dark .bg-light {
   background-color: #1E1E1E !important;
@@ -378,9 +382,20 @@ a:hover {
   font-weight: 500;
   margin: 0 0.5rem;
   transition: var(--transition);
+  white-space: nowrap;
 }
 
-.navbar-nav .nav-link:hover {
+@media (min-width: 992px) and (max-width: 1250px) {
+  .navbar-nav .nav-link {
+    margin: 0 0.1rem;
+    font-size: 0.9rem;
+    padding-left: 0.3rem !important;
+    padding-right: 0.3rem !important;
+  }
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
   color: var(--primary-color) !important;
 }
 
@@ -410,6 +425,11 @@ a:hover {
 .hero-content {
   position: relative;
   z-index: 2;
+}
+
+.hero-section p {
+  color: var(--dark-color);
+  font-weight: 500;
 }
 
 .section-padding {
@@ -900,6 +920,17 @@ body.dark .alert-info {
     bottom: 20px;
     right: 20px;
   }
+
+  .hero-section .hero-content .d-flex {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-section .hero-content .btn {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
 }
 
 @media (max-width: 425px) {
@@ -1009,5 +1040,32 @@ body.dark .alert-info {
 
   h3 {
     font-size: 14pt;
+  }
+
+  /* ==================== REGISTER PAGE FIXES ==================== */
+  .register-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    /* Account for fixed navbar */
+    padding-bottom: 50px;
+  }
+
+  @media (max-width: 992px) {
+    .register-section {
+      padding-top: 120px;
+    }
+  }
+
+  /* ==================== GLOBAL RESETS ==================== */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ensure inputs are readable in dark mode */
+  body.dark .input-group-text i {
+    color: var(--white-color);
   }
 }

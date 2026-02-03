@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon - ClearSpace Organizers</title>
-    <meta name="description" content="Something amazing is coming soon! ClearSpace Organizers is working on exciting new features to help you transform your space.">
+    <meta name="description"
+        content="Something amazing is coming soon! ClearSpace Organizers is working on exciting new features to help you transform your space.">
     <meta name="keywords" content="coming soon, maintenance, new features, clearspace organizers">
-    
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
-    
+
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
+
 <body>
     <!-- Main Content -->
     <main>
@@ -26,7 +29,9 @@
                 <a class="navbar-brand" href="index.html">
                     <i class="bi bi-house-heart-fill me-2"></i>ClearSpace Organizers
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -76,7 +81,7 @@
                         <!-- Title -->
                         <h1 class="display-3 fw-bold mb-4 animate-fade-in-up">Coming Soon</h1>
                         <p class="lead mb-5 animate-fade-in-up">
-                            We're working hard to bring you something amazing! 
+                            We're working hard to bring you something amazing!
                             Our team is busy organizing new features and improvements to help you transform your space.
                         </p>
 
@@ -110,10 +115,12 @@
                                         <h5 class="mb-3">Get Notified</h5>
                                         <p class="text-muted mb-4">Be the first to know when we're back online!</p>
                                         <form class="d-flex">
-                                            <input type="email" class="form-control me-2" placeholder="Enter your email" required>
+                                            <input type="email" class="form-control me-2" placeholder="Enter your email"
+                                                required>
                                             <button type="submit" class="btn btn-primary">Notify Me</button>
                                         </form>
-                                        <small class="text-muted">We respect your privacy and won't share your email.</small>
+                                        <small class="text-muted">We respect your privacy and won't share your
+                                            email.</small>
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +194,7 @@
                     <div class="col-lg-8 text-center">
                         <h3 class="mb-4">Need Help Now?</h3>
                         <p class="text-muted mb-4">
-                            Our team is still available to help you with your organizing needs. 
+                            Our team is still available to help you with your organizing needs.
                             Reach out to us and we'll get back to you as soon as possible.
                         </p>
                         <div class="d-flex justify-content-center gap-3 flex-wrap">
@@ -209,7 +216,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 mb-4">
-                    <h5><i class="bi bi-house-heart-fill me-2"></i>ClearSpace Organizers</h5>
+                    <a href="index.html" class="navbar-brand d-block mb-3"><i
+                            class="bi bi-house-heart-fill me-2"></i>ClearSpace Organizers</a>
                     <p class="mb-3">Transforming spaces and lives through professional organization services.</p>
                     <div class="social-icons">
                         <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
@@ -266,31 +274,31 @@
             min-width: 80px;
             backdrop-filter: blur(10px);
         }
-        
+
         .countdown-number {
             font-size: 2rem;
             font-weight: 700;
             color: var(--white-color);
             display: block;
         }
-        
+
         .countdown-label {
             font-size: 0.875rem;
             color: var(--white-color);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        
+
         @media (max-width: 576px) {
             .countdown-item {
                 min-width: 60px;
                 padding: 0.75rem 0.5rem;
             }
-            
+
             .countdown-number {
                 font-size: 1.5rem;
             }
-            
+
             .countdown-label {
                 font-size: 0.75rem;
             }
@@ -299,16 +307,16 @@
 
     <script>
         // Notification form handler
-        document.querySelector('.card form').addEventListener('submit', function(e) {
+        document.querySelector('.card form').addEventListener('submit', function (e) {
             e.preventDefault();
             const email = this.querySelector('input[type="email"]').value;
-            
+
             // Show success message
             const cardBody = this.closest('.card-body');
             const successMessage = document.createElement('div');
             successMessage.className = 'alert alert-success';
             successMessage.innerHTML = '<i class="bi bi-check-circle me-2"></i>Thank you! We\'ll notify you as soon as we\'re back online.';
-            
+
             cardBody.innerHTML = '';
             cardBody.appendChild(successMessage);
         });
@@ -317,4 +325,5 @@
         initCountdown();
     </script>
 </body>
+
 </html>
