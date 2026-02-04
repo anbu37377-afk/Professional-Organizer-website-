@@ -117,6 +117,16 @@ body.dark .hero-section p {
   color: #FFFFFF !important;
 }
 
+body.dark .hero-section .btn-outline-light:hover {
+  color: #000000 !important;
+  background-color: #FFFFFF !important;
+  border-color: #FFFFFF !important;
+}
+
+body.dark .btn-primary:hover {
+  color: #000000 !important;
+}
+
 /* Dark Mode - Footer */
 body.dark .footer {
   background-color: #000000;
@@ -398,7 +408,7 @@ a:hover {
 
 .navbar-brand {
   font-family: var(--secondary-font);
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   font-weight: 700;
   color: var(--primary-color) !important;
 }
@@ -1005,6 +1015,35 @@ body.dark .alert-info {
     margin-bottom: var(--spacing-xs);
   }
 }
+
+@media (max-width: 360px) {
+  .navbar-toggler {
+    position: relative !important;
+    top: auto !important;
+    right: auto !important;
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+    padding: 8px 12px !important;
+    border-radius: 8px !important;
+    border: 1px solid var(--primary-color) !important;
+    background-color: var(--white-color) !important;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%238B9A7B' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+
+  .navbar {
+    padding: 8px 0 !important;
+  }
+
+  .navbar-brand {
+    font-size: 1.2rem !important;
+    margin-bottom: 5px !important;
+  }
+}
+
+
 
 /* ==================== RTL SUPPORT ==================== */
 [dir="rtl"] {
