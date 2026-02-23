@@ -106,6 +106,21 @@ body.dark .navbar-nav .nav-link.active {
   padding-bottom: 5px;
 }
 
+body.dark .navbar .btn-primary {
+  color: #FFFFFF !important;
+}
+
+body.dark .navbar .btn-outline-primary {
+  color: #E0E0E0 !important;
+  border-color: #9AAB8B;
+}
+
+body.dark .navbar .btn-outline-primary:hover {
+  color: #1E1E1E !important;
+  background-color: #9AAB8B;
+  border-color: #9AAB8B;
+}
+
 /* Dark Mode - Hero Section */
 body.dark .hero-section {
   background: linear-gradient(135deg, #1a1a1a, #2c2c2c);
@@ -398,6 +413,7 @@ a:hover {
   background-color: var(--white-color) !important;
   box-shadow: var(--shadow-sm);
   transition: var(--transition);
+  padding: 0.75rem 0;
 }
 
 @media (min-width: 1200px) {
@@ -421,7 +437,32 @@ a:hover {
   white-space: nowrap;
 }
 
+.navbar .d-flex.align-items-center {
+  gap: 0.75rem;
+}
+
+.navbar .d-flex.align-items-center .theme-toggle,
+.navbar .d-flex.align-items-center .btn {
+  margin-right: 0 !important;
+}
+
 @media (min-width: 992px) and (max-width: 1250px) {
+  .navbar .container {
+    position: relative;
+  }
+
+  .navbar-collapse {
+    justify-content: flex-end;
+  }
+
+  .navbar-nav.mx-auto {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0 !important;
+  }
+
   .navbar-nav .nav-link {
     margin: 0 0.1rem;
     font-size: 0.9rem;
@@ -533,6 +574,15 @@ a:hover {
   padding: var(--spacing-lg) 0 var(--spacing-md);
 }
 
+.footer p {
+  color: inherit;
+}
+
+.footer .navbar-brand {
+  color: #D4C5B9 !important;
+  opacity: 1;
+}
+
 .footer h5 {
   color: var(--secondary-color);
   margin-bottom: var(--spacing-sm);
@@ -595,7 +645,7 @@ a:hover {
 }
 
 .navbar .btn-primary {
-  margin-left: 0.5rem;
+  margin-left: 0;
 }
 
 /* ==================== BACK TO TOP ==================== */
